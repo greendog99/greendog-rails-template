@@ -1,6 +1,6 @@
 # Set up Gemfile
 
-puts "\nAppending Gemfile and running Bundler ...".magenta
+puts "Appending Gemfile and running Bundler ...".magenta
 
 run "rm Gemfile"
 file 'Gemfile', <<-RUBY.gsub(/^ {2}/, '')
@@ -62,4 +62,4 @@ file 'Gemfile', <<-RUBY.gsub(/^ {2}/, '')
   end
 RUBY
 
-run "bundle install"
+# run "bundle install"

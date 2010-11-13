@@ -1,6 +1,6 @@
 # Create a .gitignore file and a new local repository, commit everything
 
-puts "\nInitializing new Git repo ...".magenta
+puts "Initializing new Git repo ...".magenta
 
 run 'rm .gitignore'
 file '.gitignore', <<-CODE.gsub(/^ {2}/, '')

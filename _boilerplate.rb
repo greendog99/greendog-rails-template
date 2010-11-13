@@ -1,6 +1,6 @@
 # Install Paul Irish's HTML5 Boilerplate HTML/CSS via the sporkd gem
 
-puts "\nSetting up HTML5 Boilerplate with HAML, SASS, and Compass ...".magenta
+puts "Setting up HTML5 Boilerplate with HAML, SASS, and Compass ...".magenta
 
 file 'config/compass.rb', <<-RUBY.gsub(/^ {2}/, '')
   require 'html5-boilerplate'
