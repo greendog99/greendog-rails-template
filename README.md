@@ -15,12 +15,21 @@ quick set-up of my Rails applications.  The main features are:
 
 Create a new Rails application as normal, specifying the path to the template script with the **-m** flag:
 
-    `rails new {app} -m ../fischer-rails-template/template.rb`
+`rails new {app} -m ../fischer-rails-template/template.rb`
+
+## To Do
+
+* Set up to run from github instead of locally, possibly abandoning file copying
+* Break out into sub-templates called via load_template by URL
+* Add a default application_helper.rb
+* Add rspec
+* Add capistrano
+* Update config.autoload_paths in application.rb
 
 ## Credits
 
-Thanks to others who lead the way:
+Thanks to others whose work has steered me in the right direction:
 
-* (https://github.com/shawn/shawns-rails3-template/)
-* (https://github.com/sporkd/compass-html5-boilerplate)
-* (http://html5boilerplate.com/)
+* <https://github.com/shawn/shawns-rails3-template/>
+* <https://github.com/sporkd/compass-html5-boilerplate>
+* <http://html5boilerplate.com/>

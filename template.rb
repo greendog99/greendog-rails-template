@@ -5,9 +5,10 @@ require "bundler"
 
 # Storage for some common files we'll want to insert
 @path = "#{File.dirname(__FILE__)}/files"
+@partials = "#{File.dirname(__FILE__)}"
 
 puts "\n========================================================="
-puts " MIKE'S RAILS 3 TEMPLATE - [v1.0.0] ".yellow.bold
+puts " FISCHER'S RAILS 3 TEMPLATE".yellow.bold
 puts "=========================================================\n"
 
 puts "\nRemoving unnecessary files ... ".magenta
@@ -28,7 +29,7 @@ gsub_file 'config/application.rb', /:password/, ':password, :password_confirmati
 # Gemfile
 puts "\nAppending Gemfile and running Bundler ...".magenta
 run "cat #{@path}/Gemfile > Gemfile"
-run "bundle install"
+#run "bundle install"
 
 puts "\nSetting up HTML5 Boilerplate with HAML, SASS, and Compass ...".magenta
 # gem update html5-boilerplate
@@ -59,11 +60,7 @@ end
 # run "cp #{@path}/sass_config.rb config/initializers/"
 # puts "---------------------------------------------------------"
 
-puts "\nInitializing new Git repo ...".magenta
-run "cp #{@path}/gitignore .gitignore"
-git :init
-git :add => "."
-git :commit => "-am 'Initial commit.'"
+apply "#{@partials}/_git.rb"
 
 puts "\n========================================================="
 puts " INSTALLATION COMPLETE!".yellow.bold

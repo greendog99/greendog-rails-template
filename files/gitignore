@@ -1,5 +1,0 @@
-.DS_Store
-.bundle
-log/*.log
-tmp/**/*
-db/*.sqlite3
