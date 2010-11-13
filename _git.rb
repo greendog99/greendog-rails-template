@@ -3,15 +3,15 @@
 puts "\nInitializing new Git repo ...".magenta
 
 run 'rm .gitignore'
-file '.gitignore', <<-CODE
-.DS_Store
-.bundle
-mkmf.log
-log/*.log
-tmp/**/*
-db/*.sqlite3
-public/stylesheets/compiled/*
-public/system/*
+file '.gitignore', <<-CODE.gsub(/^ {2}/, '')
+  .DS_Store
+  .bundle
+  mkmf.log
+  log/*.log
+  tmp/**/*
+  db/*.sqlite3
+  public/stylesheets/compiled/*
+  public/system/*
 CODE
 
 git :init

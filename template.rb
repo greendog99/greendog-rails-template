@@ -26,11 +26,7 @@ run "cp #{@path}/app_config.yml config/"
 gsub_file 'config/application.rb', /:password/, ':password, :password_confirmation'
 # run "cp -r #{@path}/images public/"
 
-# Gemfile
-puts "\nAppending Gemfile and running Bundler ...".magenta
-run "cat #{@path}/Gemfile > Gemfile"
-#run "bundle install"
-
+apply "#{@partials}/_gemfile.rb"
 apply "#{@partials}/_boilerplate.rb"
 apply "#{@partials}/_logrotate.rb"
 apply "#{@partials}/_git.rb"
