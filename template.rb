@@ -31,35 +31,8 @@ puts "\nAppending Gemfile and running Bundler ...".magenta
 run "cat #{@path}/Gemfile > Gemfile"
 #run "bundle install"
 
-puts "\nSetting up HTML5 Boilerplate with HAML, SASS, and Compass ...".magenta
-# gem update html5-boilerplate
-run "cp #{@path}/compass.rb config/"
-run "compass init rails -r html5-boilerplate -u html5-boilerplate -x sass -c config/compass.rb --force"
-
-puts "\nSet up log file rotation ...".magenta
-gsub_file 'config/application.rb', /end\nend/ do
-<<-RUBY
-    # Rotate log files (50 files max at 1MB each)
-    config.logger = Logger.new(config.paths.log.first, 50, 1048576)
-  end
-end
-RUBY
-end
-
-# JAVASCRIPT
-# puts " Adding Javascript files ...".green
-# puts "---------------------------------------------------------"
-# run "cp #{@path}/javascripts/application.js public/javascripts"
-# get "http://github.com/rails/jquery-ujs/raw/master/src/rails.js", "public/javascripts/rails.js"
-# puts "---------------------------------------------------------"
-
-# SASS
-# puts " Installing Sass directory, files and environment preferences ...".green
-# puts "---------------------------------------------------------"
-# run "cp -r #{@path}/sass/* app/stylesheets/"
-# run "cp #{@path}/sass_config.rb config/initializers/"
-# puts "---------------------------------------------------------"
-
+apply "#{@partials}/_boilerplate.rb"
+apply "#{@partials}/_logrotate.rb"
 apply "#{@partials}/_git.rb"
 
 puts "\n========================================================="

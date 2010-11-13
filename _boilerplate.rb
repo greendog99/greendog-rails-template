@@ -1,3 +1,8 @@
+# Install Paul Irish's HTML5 Boilerplate HTML/CSS via the sporkd gem
+
+puts "\nSetting up HTML5 Boilerplate with HAML, SASS, and Compass ...".magenta
+
+file 'config/compass.rb', <<-RUBY
 require 'html5-boilerplate'
 
 project_type = :rails
@@ -12,3 +17,6 @@ if Compass::AppIntegration::Rails.env == "development"
 else
   output_style = :compressed
 end
+RUBY
+
+run "compass init rails -r html5-boilerplate -u html5-boilerplate -x sass -c config/compass.rb --force"
