@@ -27,11 +27,11 @@ quick set-up of my Rails applications.  The main features are:
 
 Get a copy of the template:
 
-`git clone git://github.com/greendog99/fischer-rails-template.git /tmp/fischer-rails-template`
+`git clone git://github.com/greendog99/greendog-rails-template.git /tmp/greendog-rails-template`
 
 Create a new Rails application as normal, specifying the path to the template script with the **-m** flag:
 
-`rails new appname -m /tmp/fischer-rails-template/template.rb`
+`rails new appname -m /tmp/greendog-rails-template/template.rb`
 
 Enjoy.
 
