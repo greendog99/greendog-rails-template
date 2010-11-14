@@ -12,7 +12,7 @@ file 'config/compass.rb', <<-RUBY.gsub(/^ {2}/, '')
   sass_dir = "app/stylesheets"
   environment = Compass::AppIntegration::Rails.env
 
-  if Compass::AppIntegration::Rails.env == "development"
+  if Compass::AppIntegration::Rails.env == :development
     output_style = :nested
   else
     output_style = :compressed

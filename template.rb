@@ -25,13 +25,13 @@ remove_file "public/javascripts/prototype.js"
 remove_file "public/javascripts/jrails.js"
 
 apply "#{@partials}/_gemfile.rb"
-apply "#{@partials}/_rvm.rb"    # Must be after gemfile!
+apply "#{@partials}/_rvm.rb"           # Must be after gemfile since it runs bundler
 apply "#{@partials}/_boilerplate.rb"
 apply "#{@partials}/_appconfig.rb"
 apply "#{@partials}/_rspec.rb"
-apply "#{@partials}/_friendly_id.rb"
 apply "#{@partials}/_capistrano.rb"
 apply "#{@partials}/_application.rb"
+apply "#{@partials}/_friendly_id.rb"   # Must be after application.rb since it runs migrations
 
 # Do this last
 apply "#{@partials}/_git.rb"
