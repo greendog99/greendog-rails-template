@@ -2,6 +2,8 @@
 
 puts "Setting up RSpec ... ".magenta
 
+run "rm -rf test"
+
 generate 'rspec:install'
 
 generators = <<-RUBY
