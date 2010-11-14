@@ -25,6 +25,7 @@ remove_file "public/javascripts/prototype.js"
 remove_file "public/javascripts/jrails.js"
 
 apply "#{@partials}/_gemfile.rb"
+apply "#{@partials}/_rvm.rb"    # Must be after gemfile!
 apply "#{@partials}/_boilerplate.rb"
 apply "#{@partials}/_logrotate.rb"
 apply "#{@partials}/_appconfig.rb"

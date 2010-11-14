@@ -2,7 +2,7 @@
 
 puts "Initializing new Git repo ...".magenta
 
-run 'rm .gitignore'
+remove_file '.gitignore'
 file '.gitignore', <<-CODE.gsub(/^ {2}/, '')
   .DS_Store
   .bundle

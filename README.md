@@ -9,9 +9,10 @@ quick set-up of my Rails applications.  The main features are:
  * All templates, stylesheets, and views use [haml](http://haml-lang.com/) and [sass](http://sass-lang.com/).
  * Paul Irish's [HTML5 Boilerplate](http://html5boilerplate.com/) for layout and reset.
  * [Compass](http://compass-style.org/) for managing CSS mixins and frameworks.
-* Adds a Gemfile with my most commonly needed gems, and some some optional gems available to un-comment when needed.
 * Removes everything to do with Prototype, since the Boilerplate is based on [JQuery](http://jquery.com/).
 * Removes unneeded files like the default Rails index.html and image.
+* Adds a Gemfile with my most commonly needed gems, and some some optional gems available to un-comment when needed.
+* Creates a custom RVM gemset for the application, and installs all Gems via bundler.
 * Implements automatic log rotation for server logs, based on log size.
 * Adds a config/app_config.yml file and corresponding initializer, to facilitate app-specific config settings.
 * Sets up a Git repository complete with gitignore list, and commits the entire project.

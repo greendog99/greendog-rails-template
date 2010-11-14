@@ -1,8 +1,8 @@
 # Set up Gemfile
 
-puts "Appending Gemfile and running Bundler ...".magenta
+puts "Creating Gemfile ...".magenta
 
-run "rm Gemfile"
+remove_file 'Gemfile'
 file 'Gemfile', <<-RUBY.gsub(/^ {2}/, '')
   source 'http://gemcutter.org'
 
@@ -60,5 +60,3 @@ file 'Gemfile', <<-RUBY.gsub(/^ {2}/, '')
     gem 'random_data'
   end
 RUBY
-
-# run "bundle install"

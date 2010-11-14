@@ -2,7 +2,7 @@
 
 puts "Setting up RSpec ... ".magenta
 
-run "rm -rf test"
+remove_dir 'test'
 
 generate 'rspec:install'
 
