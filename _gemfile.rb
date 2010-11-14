@@ -8,18 +8,7 @@ file 'Gemfile', <<-RUBY.gsub(/^ {2}/, '')
 
   gem 'rails', '~> 3.0.0'
   gem 'mysql2'
-
-  # Better console formatting
-  gem 'hirb'
-
-  # Deploy with Capistrano
   gem 'capistrano'
-
-  # Validation of associations
-  gem 'validates_existence', '~> 0.5'
-
-  # Human readable URLs
-  gem 'friendly_id', '~> 3.1'
 
   # HTML and CSS replacement
   gem 'haml', '~> 3.0'
@@ -28,6 +17,15 @@ file 'Gemfile', <<-RUBY.gsub(/^ {2}/, '')
   # HTML/CSS framework and boilerplate
   gem 'compass'
   gem 'html5-boilerplate'
+
+  # Human readable URLs
+  gem 'friendly_id', '~> 3.1'
+
+  # Validation of associations
+  gem 'validates_existence', '~> 0.5'
+
+  # Better console formatting
+  gem 'hirb'
 
   # User management
   # gem 'devise', '~> 1.1'

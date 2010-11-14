@@ -29,13 +29,12 @@ apply "#{@partials}/_boilerplate.rb"
 apply "#{@partials}/_logrotate.rb"
 apply "#{@partials}/_appconfig.rb"
 apply "#{@partials}/_rspec.rb"
+apply "#{@partials}/_friendly_id.rb"
+apply "#{@partials}/_capistrano.rb"
+apply "#{@partials}/_application.rb"
 
-puts "Adding miscellaneous useful stuff ... ".magenta
-gsub_file 'config/application.rb', /:password/, ':password, :password_confirmation'
-
+# Do this last
 apply "#{@partials}/_git.rb"
-
-# capify!
 
 puts "\n========================================================="
 puts " INSTALLATION COMPLETE!".yellow.bold
