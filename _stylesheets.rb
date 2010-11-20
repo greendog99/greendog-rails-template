@@ -295,8 +295,111 @@ SASS
 
 append_file 'app/stylesheets/style.sass', "@import partials/forms\n"
 file 'app/stylesheets/partials/_forms.sass', <<-SASS.gsub(/^ {2}/, '')
+  //
+  // FORMS
+  //
+
+  #main
+    form
+      margin-top: 1em
+      fieldset
+        margin-bottom: 1em
+        padding: 1em
+        border: 1px solid silver
+        +border-radius(10px)
+        +linear-gradient(color-stops(#fff, #f2efe9))
+      
+      legend
+        padding: 0 6px
+        font-weight: bold
+
+      .form_input
+        margin-bottom: 1em
+        clear: both
+
+      label
+        display: block
+        +font-size(12px)
+        &.multiline
+          width: 35em
+        
+      span.description
+        +font-size(11px)
+        &.required
+          color: #844
+
+      .cancel
+        margin-left: 2em
+
+      .checkbox_group
+        input
+          height: 1em
+          vertical-align: top
+        label
+          display: inline
+          margin-left: 4px
+
+      input
+        border: 1px solid #b5ceff
+        padding: 3px
+        &:focus
+          background-color: #F8F8E8
+          border: 1px solid #D8D800
+          color: black
+
+      textarea
+        width: 99%
+        height: 16em
+        line-height: 1.2em
+        padding: 4px
+        &.tall
+          height: 24em
+        &.short
+          height: 8em
+        &:focus
+          background-color: #F8F8E0
+          border: 1px solid #D8D800
+          color: black
 SASS
 
 append_file 'app/stylesheets/style.sass', "@import partials/tables\n"
 file 'app/stylesheets/partials/_tables.sass', <<-SASS.gsub(/^ {2}/, '')
+  // Tables
+
+  table.horizontal
+    margin: 20px
+    text-align: left
+    padding: 1em
+    th
+      border-bottom: 2px solid #6678b1
+      font-weight: bold
+      padding: 6px 8px
+    td
+      padding: 6px 8px
+    tbody
+      tr:hover
+        background-color: #e8f0ff
+
+  table.vertical
+    margin: 20px
+    text-align: left
+    padding: 1em
+    th
+      font-weight: bold
+      padding: 6px 8px
+    td
+      padding: 2px 1em
+      border-bottom: 1px solid #f1eee8
+      vertical-align: middle
+    td:first-child
+      text-align: right
+      white-space: nowrap
+      background-color: #f0ede7
+      border-bottom: 2px solid white
+      border-top: 2px solid white
+      +border_radius(8px)
+    tr:last-child
+      border: none
+    pre
+      font-family: sans-serif
 SASS

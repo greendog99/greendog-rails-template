@@ -60,11 +60,68 @@ file 'app/views/demos/text.html.haml', <<-HAML.gsub(/^ {2}/, '')
         sollicitudin, nisl vel suscipit facilisis, quam arcu adipiscing diam, nec lacinia arcu elit non lorem. Vestibulum
         ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
 
+      %hr
+
       .buttons
         %button{:type => :submit, :class => 'positive', :name => :button, :value => :save} Save Changes
         = link_to 'Cancel Changes', '/', :class => 'button neutral large'
         = link_to 'Cancel Changes', '/', :class => 'button normal large'
         = link_to 'Cancel Changes', '/', :class => 'button warning large'
+
+      %hr
+
+      %table.horizontal
+        %thead
+          %tr
+            %th Column 1
+            %th Column 2
+            %th Column 3
+        %tbody
+          %tr
+            %td Cell 1
+            %td Cell 2
+            %td Cell 3
+          %tr
+            %td Cell 1
+            %td Cell 2
+            %td Cell 3
+          %tr
+            %td Cell 1
+            %td Cell 2
+            %td Cell 3
+
+      %hr
+
+      %table.vertical
+        %tbody
+          %tr
+            %td Row 1
+            %td Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam egestas sodales metus sit amet varius. Nam euismod bibendum ligula. Nam rhoncus, orci ac fermentum viverra
+          %tr
+            %td Row 2
+            %td Aenean aliquet erat at velit pellentesque posuere.
+          %tr
+            %td Row 3
+            %td Etiam at dui nunc, in iaculis dolor. Maecenas lorem risus, pellentesque eget convallis et, ornare id elit. Donec porta suscipit tincidunt. Nam quis mauris in augue viverra tempus quis non nibh. Cras porttitor lectus cursus lacus       sagittis non volutpat tortor pharetra. Aliquam ultrices ullamcorper molestie. Integer fringilla nisl vitae justo       tempor semper.
+
+      %hr
+
+      = form_tag '/' do
+        %fieldset
+          %legend Sample form
+          .form_input
+            = label_tag 'Name:'
+            = text_field_tag :name
+            %span.description.required
+              This is where you enter your name.
+
+          .form_input
+            = label_tag "Text:"
+            = text_area_tag :content
+
+          .checkbox_group
+            = check_box_tag :active
+            = label_tag "Check this box for great fun"
 
       %hr
 

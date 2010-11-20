@@ -21,4 +21,4 @@ run "rvm rvmrc trust #{@app_path}"
 run "rvm #{desired_ruby}@#{gemset_name} gem install bundler"
 
 # Install all other gems needed from Gemfile
-# run "rvm #{desired_ruby}@#{gemset_name} exec bundle install"
+run "rvm #{desired_ruby}@#{gemset_name} exec bundle install"

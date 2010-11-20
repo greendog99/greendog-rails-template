@@ -43,7 +43,7 @@ to `http://localhost:9000/demos/text` and `http://localhost:9000/demos/grid`.
 ## To Do
 
 * Add capistrano
-* Add base styles for tables and forms
+* Add form shared error message partial
 * Optionally (based on user interrogation) set up features like devise, paperclip, etc
 
 ## See Also
