@@ -30,6 +30,7 @@ apply "#{@partials}/_boilerplate.rb"
 apply "#{@partials}/_grid.rb"          # Must be after boilerplate since it modifies SASS files
 apply "#{@partials}/_stylesheets.rb"   # Must be after boilerplate since it modifies SASS files
 apply "#{@partials}/_layouts.rb"       # Must be after boilerplate since it modifies HAML files
+apply "#{@partials}/_helpers.rb"
 apply "#{@partials}/_appconfig.rb"
 apply "#{@partials}/_rspec.rb"
 apply "#{@partials}/_capistrano.rb"
