@@ -2,53 +2,97 @@
 
 puts "Creating CSS grid framework ...".magenta
 
-file 'app/stylesheets/partials/_grid.sass', <<-SASS.gsub(/^ {2}/, '')
-  /* From http://bjorkoy.com/2010/05/css-grids-with-sass/
-
-  $width: 960px
-  $columns: 12
-  $col_margin: 20px
-
-  /* math magic
-  $col_width: ($width - $col_margin * ($columns - 1)) / $columns
-  $col_total_width: $col_width + $col_margin
-
-  /* create row div
-  =row
-    float: left
-    clear: both
-    width: $width
-
-  /* create a column div
-  =col($n: 1)
-    float: left
-    +span($n)
-
-  /* make an element span n columns
-  =span($n: 1)
-    width: $n * $col_width + ($n - 1) * $col_margin
-    @if $n == $columns
-      margin-right: 0
-    @else
-      margin-right: $col_margin
-
-  /* the last column in a row needs this
-  =last
-    margin-right: 0
-
-  /* prepend n blank columns
-  =prepend($n: 1)
-    margin-left: $col_total_width * $n
-
-  /* append n blank columns
-  =append($n: 1)
-    margin-right: $col_total_width * $n + $col_margin
-SASS
-
 inject_into_file 'app/stylesheets/style.sass', :after => "@import partials/example\n\n" do
-<<-SASS
-// Import the custom grid layout
-@import partials/grid
+  <<-SASS.gsub(/^ {4}/, '')
+    // Import the custom grid layout
+    @import partials/grid
 
-SASS
+  SASS
 end
+
+file 'app/stylesheets/partials/_grid.sass', <<-SASS.gsub(/^ {2}/, '')
+  /* From http://www.1kbgrid.com/
+
+  $columns: 12
+  $col_width: 60px
+  $gutter: 20px
+  $margin = $gutter / 2
+  $width = $columns * ($col_width + $gutter)
+
+  =row
+    width: $width
+    margin: 0 auto
+    overflow: hidden
+
+  =inner_row
+    margin: 0 ($margin * -1)
+    width: auto
+    display: inline-block
+
+  =col($n: 1)
+    margin: 0 $margin
+    overflow: hidden
+    float: left
+    display: inline
+    width: ($n - 1) * ($col_width + $gutter) + $col_width
+
+  =prepend($n: 1)
+    margin-left: $n * ($col_width + $gutter) + $margin
+
+  =append($n: 1)
+    margin-right: $n * ($col_width + $gutter) + $margin
+
+  // Add the .row class to a div to start a new row. Can be nested
+
+  .row
+    +row
+
+  .row .row
+    +inner_row
+
+  // Some sample classes to get started with columns. You should create
+  // your own semantic classes (e.g. section.welcome, div.blog, div.post...)
+
+  .non_semantic_12col
+    +col(12)
+
+  .non_semantic_8col
+    +col(8)
+
+  .non_semantic_4col
+    +col(4)
+
+  .non_semantic_4col_tall
+    +col(4)
+    p
+      line-height: 170px
+
+  //
+  // Sample HAML to draw a grid
+  //
+  // .row
+  //   .non_semantic_12col
+  //     %p 12
+  // 
+  // .row
+  //   .non_semantic_8col
+  //     %p 8
+  //     .row
+  //       .non_semantic_4col
+  //         %p 4
+  //       .non_semantic_4col
+  //         %p 4
+  //   .non_semantic_4col_tall
+  //     %p 4
+  //
+  // ---------------------------------------------------
+  // |                        12                       |
+  // ---------------------------------------------------
+  // ---------------------------------- ----------------
+  // |                8               | |              |
+  // ---------------------------------- |      4       |
+  // ----------------- ---------------- |              |
+  // |       4       | |       4      | |              |
+  // ----------------- ---------------- ----------------
+  //
+SASS
