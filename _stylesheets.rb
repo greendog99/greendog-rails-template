@@ -2,6 +2,11 @@
 
 puts "Creating default stylesheets ...".magenta
 
+remove_file 'app/stylesheets/partials/_example.sass'
+gsub_file 'app/stylesheets/style.sass', %r{//@include html5-boilerplate;}, '@include html5-boilerplate'
+gsub_file 'app/stylesheets/style.sass', %r{@import partials/example}, '//@import partials/example'
+
+remove_file 'app/stylesheets/partials/_page.sass'
 file 'app/stylesheets/partials/_page.sass', <<-SASS.gsub(/^ {2}/, '')
   @import compass/css3
 
@@ -49,7 +54,7 @@ file 'app/stylesheets/partials/_page.sass', <<-SASS.gsub(/^ {2}/, '')
   //-----------------------------------
 
   body
-    background-color: #d0d9e0
+    background-color: white
 
   div#container
 
@@ -83,9 +88,11 @@ file 'app/stylesheets/partials/_page.sass', <<-SASS.gsub(/^ {2}/, '')
       +col(12)
 
   footer#footer
+    border-top: 1px solid #c2c9cf
+    border-bottom: 1px solid #c2c9cf
     background-color: #d0d9e0
     color: #333
-    padding: 10px 0
+    padding: 20px 0
     section.copyright
       +col(2)
       +prepend(10)
