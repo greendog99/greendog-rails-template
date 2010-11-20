@@ -128,6 +128,7 @@ file 'app/stylesheets/partials/_buttons.sass', <<-SASS.gsub(/^ {2}/, '')
       text-decoration: none
       font: 13px/100% Arial, Helvetica, sans-serif
       font-weight: bold
+      line-height: 1.45em
       padding: .4em 1.5em .42em
       text-shadow: 0 1px 1px rgba(0,0,0,.3)
       -webkit-border-radius: 1em
@@ -264,34 +265,31 @@ file 'app/stylesheets/partials/_flashes.sass', <<-SASS.gsub(/^ {2}/, '')
   // Fancy boxes for Rails flash messages
   //
 
-  !flash_light_blue = #bde5f8
-  !flash_dark_blue = #00529b
-  !flash_light_red = #ffbaba
-  !flash_dark_red = #d8000c
+  !flash_notice_color = #bde5f8
+  !flash_alert_color = #ffbaba
 
-  .flash_notice, .flash_alert
-    border: 1px solid
-    margin-bottom: 15px
-    margin-top: 10px
-    padding: 15px 10px 15px 25px
-    background-repeat: no-repeat
-    background-position: 100px center
-    font-size: $size_big1
-    +border_radius(5px)
-    +box_shadow(#666, 0 1px 4px)
-    +clearfix
+  #flash
+    +col(8)
+    +prepend(2)
+    +append(2)
 
-  .flash_notice
-    color: $flash_dark_blue - #333
-    border-color: $flash_dark_blue
-    background-color: $flash_light_blue
-    +box_gradient($flash_light_blue + #111, $flash_light_blue - #111)
+    .notice, .alert
+      border: 1px solid
+      margin: 0 0 20px 0
+      padding: 15px
+      +border-radius(8px)
 
-  .flash_alert
-    color: $flash_dark_red - #333
-    border-color: $flash_dark_red
-    background-color: $flash_light_red
-    +box_gradient($flash_light_red + #111, $flash_light_red - #111)
+    .notice
+      color: $flash_notice_color - #888
+      border-color: $flash_notice_color - #333
+      background-color: $flash_notice_color
+      +linear-gradient(color-stops($flash_notice_color + #111, $flash_notice_color - #111))
+
+    .alert
+      color: $flash_alert_color - #888
+      border-color: $flash_alert_color - #333
+      background-color: $flash_alert_color
+      +linear-gradient(color-stops($flash_alert_color + #111, $flash_alert_color - #111))
 SASS
 
 

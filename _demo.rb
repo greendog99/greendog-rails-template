@@ -18,6 +18,8 @@ file 'app/controllers/demos_controller.rb', <<-RUBY.gsub(/^ {2}/, '')
     end
 
     def text      
+      flash.now[:alert] = "This is an alert"
+      flash.now[:notice] = "This is a notice"
     end
 
   end
@@ -58,7 +60,13 @@ file 'app/views/demos/text.html.haml', <<-HAML.gsub(/^ {2}/, '')
         sollicitudin, nisl vel suscipit facilisis, quam arcu adipiscing diam, nec lacinia arcu elit non lorem. Vestibulum
         ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
 
-        %hr
+      .buttons
+        %button{:type => :submit, :class => 'positive', :name => :button, :value => :save} Save Changes
+        = link_to 'Cancel Changes', '/', :class => 'button neutral large'
+        = link_to 'Cancel Changes', '/', :class => 'button normal large'
+        = link_to 'Cancel Changes', '/', :class => 'button warning large'
+
+      %hr
 
   .row
     .main

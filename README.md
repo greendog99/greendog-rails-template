@@ -37,7 +37,8 @@ Create a new Rails application as normal, specifying the path to the template sc
 
 `rails new appname -m /tmp/greendog-rails-template/template.rb`
 
-Start the rails server with `rails s` and browse to `http://localhost/demos/text` and `http://localhost/demos/grid`.
+Start the rails server with `rails s` and browse
+to `http://localhost:9000/demos/text` and `http://localhost:9000/demos/grid`.
 
 ## To Do
 
