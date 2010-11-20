@@ -4,19 +4,27 @@ puts "Creating default layout ...".magenta
 
 remove_file 'app/views/layouts/_footer.html.haml'
 file 'app/views/layouts/_footer.html.haml', <<-HAML.gsub(/^ {2}/, '')
-  %section.copyright
+  .copyright
     %p Copyright &copy; #{Date.today.year}
 HAML
 
 remove_file 'app/views/layouts/_header.html.haml'
 file 'app/views/layouts/_header.html.haml', <<-HAML.gsub(/^ {2}/, '')
-  %section.title
+  .title
     %h1 Header
+
+  .logo
+    %h1 Logo goes here
 HAML
 
 file 'app/views/layouts/_nav.html.haml', <<-HAML.gsub(/^ {2}/, '')
-  %p
-    This is your navigation bar. Enjoy.
+  .menu
+    %p
+      This is your navigation bar. Enjoy.
+
+  .search
+    %p
+      Search box goes here.
 HAML
 
 # This needs to be kept up to date as the boilerplate and sporkd gem get updated
@@ -37,8 +45,8 @@ file 'app/views/layouts/application.html.haml', <<-HAML.gsub(/^ {2}/, '')
         #main
           .row
             = render :partial => 'layouts/flashes'
-          .row
-            = yield
+          -# You MUST enclose your yielded content in at least one .row
+          = yield
         %footer#footer
           .row
             = render :partial => 'layouts/footer'

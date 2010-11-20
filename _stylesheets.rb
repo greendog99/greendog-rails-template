@@ -63,10 +63,12 @@ file 'app/stylesheets/partials/_page.sass', <<-SASS.gsub(/^ {2}/, '')
     border-bottom: 1px solid #4f708b
     color: #444
     padding: 15px 0
-    section.title
-      +col(12)
+    .title
+      +col(9)
       h1
         +font-size(32px)
+    .logo
+      +col(3)
 
   nav#nav
     background-color: #7599b9
@@ -76,16 +78,22 @@ file 'app/stylesheets/partials/_page.sass', <<-SASS.gsub(/^ {2}/, '')
     margin-bottom: 8px
     color: #fff
     padding: 10px 0
-    p
-      +col(12)
+    .menu
+      +col(9)
+    .search
+      +col(3)
+      text-align: right
 
   div#main
     background-color: white
     color: #444
     padding: 15px 0
-    section.title
-    p
+    div.content
       +col(12)
+    div.main
+      +col(9)
+    div.aside
+      +col(3)
 
   footer#footer
     border-top: 1px solid #c2c9cf
@@ -93,7 +101,7 @@ file 'app/stylesheets/partials/_page.sass', <<-SASS.gsub(/^ {2}/, '')
     background-color: #d0d9e0
     color: #333
     padding: 20px 0
-    section.copyright
+    .copyright
       +col(2)
       +prepend(10)
       p

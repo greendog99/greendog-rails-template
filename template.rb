@@ -36,6 +36,7 @@ apply "#{@partials}/_capistrano.rb"
 apply "#{@partials}/_application.rb"
 apply "#{@partials}/_friendly_id.rb"   # Must be after application.rb since it runs migrations
 apply "#{@partials}/_git.rb"           # Must be last in order to commit initial repository
+apply "#{@partials}/_demo.rb"
 
 puts "\n========================================================="
 puts " INSTALLATION COMPLETE!".yellow.bold
