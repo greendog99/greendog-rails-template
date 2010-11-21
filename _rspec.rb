@@ -4,7 +4,8 @@ puts "Setting up RSpec ... ".magenta
 
 remove_dir 'test'
 
-generate 'rspec:install'
+# generate 'rspec:install'
+run "#{@rvm} exec rails generate rspec:install"
 
 generators = <<-RUBY
   config.generators do |g|

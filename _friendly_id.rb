@@ -2,4 +2,4 @@
 
 puts "Setting up friendly_id ... ".magenta
 
-generate 'friendly_id'
+run "#{@rvm} exec rails generate friendly_id"
