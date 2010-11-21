@@ -54,7 +54,7 @@ file 'Gemfile', <<-RUBY.gsub(/^ {2}/, '')
 
   group :development, :test do
     gem 'factory_girl_rails', '~> 1.0'
-    # gem 'factory_girl_generator', '~> 1.0'
+    gem 'factory_girl_generator'
     gem 'rspec-rails', '~> 2.1.0'
     gem 'rcov'
     gem 'random_data'
