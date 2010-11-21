@@ -71,9 +71,10 @@ file 'app/stylesheets/partials/_page.sass', <<-SASS.gsub(/^ {2}/, '')
       +col(3)
 
   nav#nav
-    background-color: #7599b9
+    background-color: #456989
     border-top: 1px solid #87abc8
     border-bottom: 1px solid #e0e8f0
+    +linear-gradient(color-stops(#7599b9, #456989))
     color: #fff
     padding: 10px 0
     .menu
@@ -95,7 +96,7 @@ file 'app/stylesheets/partials/_page.sass', <<-SASS.gsub(/^ {2}/, '')
       +col(3)
 
   footer#footer
-    border-top: 1px solid #c2c9cf
+    border-top: 1px solid #b2b9bf
     border-bottom: 1px solid #c2c9cf
     background-color: #d0d9e0
     color: #333

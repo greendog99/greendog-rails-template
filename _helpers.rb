@@ -1,4 +1,4 @@
-# Set up some view helper methods
+# Set up some view helpers and partials
 
 puts "Creating useful application_helper.rb ...".magenta
 
@@ -18,3 +18,18 @@ file 'app/helpers/application_helper.rb', <<-RUBY.gsub(/^ {2}/, '')
 
   end
 RUBY
+
+# Use inside forms like this:
+#
+# = form_for @user do |f|
+#   = render '/shared/error_messages', :target => @user
+file 'app/views/shared/_error_messages.html.haml', <<-HAML.gsub(/^ {2}/, '')
+  - if target.errors.any?
+    #errorExplanation
+      %h2
+        = pluralize(target.errors.count, "error")
+        prohibited this record from being saved:
+      %ul
+        - target.errors.full_messages.each do |msg|
+          %li= msg
+HAML

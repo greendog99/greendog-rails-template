@@ -11,6 +11,7 @@ quick set-up of my Rails applications.  The main features are:
  * [Compass](http://compass-style.org/) for managing CSS mixins and frameworks.
 * Adds a simple 12-column grid framework from <http://www.1kbgrid.com/> (converted to sass).
 * Adds a basic stylesheet with header, nav bar, body, and footer, and styles for flash messages and buttons.
+* Adds a partial to render form error messages.
 * Removes everything to do with Prototype, since the Boilerplate is based on [JQuery](http://jquery.com/).
 * Removes unneeded files like the default Rails index.html and image.
 * Adds a Gemfile with commonly needed gems, and some some optional gems available to un-comment when needed.
@@ -40,11 +41,14 @@ Create a new Rails application as normal, specifying the path to the template sc
 Start the rails server with `rails s` and browse
 to `http://localhost:9000/demos/text` and `http://localhost:9000/demos/grid`.
 
+## Documentation
+
+This section will explain how to use each of the features.
+
 ## To Do
 
-* Add capistrano
-* Add form shared error message partial
-* Optionally (based on user interrogation) set up features like devise, paperclip, etc
+* Add capistrano deploy.rb file.
+* Optionally (based on user interrogation) set up features like devise, paperclip, etc.
 
 ## See Also
 
