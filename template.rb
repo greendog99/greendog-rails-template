@@ -47,21 +47,6 @@ puts "\n========================================================="
 puts " RAILS 3 TEMPLATE".yellow.bold
 puts "=========================================================\n"
 
-puts "\nRemoving unnecessary files ... ".magenta
-remove_file "README"
-remove_file "public/index.html"
-remove_file "public/favicon.ico"
-remove_file "public/robots.txt"
-remove_file "public/index.html"
-remove_file "public/images/rails.png"
-remove_file "app/views/layouts/application.html.erb"
-# remove prototype files
-remove_file "public/javascripts/controls.js"
-remove_file "public/javascripts/dragdrop.js"
-remove_file "public/javascripts/effects.js"
-remove_file "public/javascripts/prototype.js"
-remove_file "public/javascripts/jrails.js"
-
 apply "#{@partials}/_gemfile.rb"
 apply "#{@partials}/_rvm.rb"           # Must be after gemfile since it runs bundler
 apply "#{@partials}/_boilerplate.rb"
