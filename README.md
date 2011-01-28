@@ -1,4 +1,8 @@
-# Mike's Rails Template
+This is a fork of a rails template based on Rails template based on Mike Fischer's greendog-rails-template. It also incorporates work from PerfectLine's Template Bucket system. The goal of this fork is to fix bugs and extend the template so that it works better out-of-the-box.
+
+For more information:
+https://github.com/greendog99/greendog-rails-template
+https://github.com/perfectline/template-bucket
 
 ## Overview
 
