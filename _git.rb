@@ -7,7 +7,8 @@ file '.gitignore', <<-CODE.gsub(/^ {2}/, '')
   .DS_Store
   .bundle
   mkmf.log
-  log/*.log
+  log/*
+  coverage/*
   tmp/**/*
   db/*.sqlite3
   public/stylesheets/compiled/*

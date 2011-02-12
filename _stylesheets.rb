@@ -54,7 +54,7 @@ file 'app/stylesheets/partials/_page.sass', <<-SASS.gsub(/^ {2}/, '')
   //-----------------------------------
 
   body
-    background-color: white
+    background-color: #f0f0f0
 
   div#container
 
@@ -67,6 +67,7 @@ file 'app/stylesheets/partials/_page.sass', <<-SASS.gsub(/^ {2}/, '')
       +col(9)
       h1
         +font-size(32px)
+        +text-shadow(#edf9ff, 0px, 2px, 3px)
     .logo
       +col(3)
 
@@ -84,7 +85,7 @@ file 'app/stylesheets/partials/_page.sass', <<-SASS.gsub(/^ {2}/, '')
       text-align: right
 
   div#main
-    background-color: white
+    background-color: #f0f0f0
     color: #444
     border-top: 1px solid #c0d0e0
     padding: 15px 0
