@@ -1,42 +1,14 @@
 # Check prerequisites
-unless Gem.available?("colored")
-  run "gem install colored"
-  Gem.refresh
-  Gem.activate("colored")
+%w{rails colored bundler compass html5-boilerplate haml}.each do |component|
+  unless Gem.available?(component)
+    run "gem install #{component}"
+    Gem.refresh
+    Gem.activate(component)
+  end
 end
 
-unless Gem.available?("rails")
-  run "gem install rails"
-  Gem.refresh
-  Gem.activate("rails")
-end
-
-unless Gem.available?("bundler")
-  run "gem install bundler"
-  Gem.refresh
-  Gem.activate("bundler")
-end
-
-unless Gem.available?("compass")
-  run "gem install compass"
-  Gem.refresh
-  Gem.activate("compass")
-end
-
-unless Gem.available?("html5-boilerplate")
-  run "gem install html5-boilerplate"
-  Gem.refresh
-  Gem.activate("html5-boilerplate")
-end
-
-unless Gem.available?("haml")
-  run "haml"
-  Gem.refresh
-  Gem.activate("haml")
-end
-
-require "colored"
 require "rails"
+require "colored"
 require "bundler"
 require "haml"
 

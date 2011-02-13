@@ -68,6 +68,6 @@ file 'Gemfile', <<-RUBY.gsub(/^ {2}/, '')
     gem 'factory_girl_generator'
     gem 'rspec-rails', '~> 2.5'
     gem 'rcov'
-    gem 'random_data'
+    gem 'forgery'                     # Easy generation of fake data
   end
 RUBY

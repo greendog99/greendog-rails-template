@@ -39,7 +39,7 @@ Get a copy of the template:
 
 Create a new Rails application as normal, specifying the path to the template script with the **-m** flag:
 
-`rails new appname -m /tmp/greendog-rails-template/template.rb`
+`rails new appname -d mysql -m /tmp/greendog-rails-template/template.rb`
 
 Start the rails server with `rails s` and browse
 to `http://localhost:3000/demos/text` and `http://localhost:3000/demos/grid`.
