@@ -7,4 +7,4 @@ copy_static_file 'config/compass.rb'
 run "compass init rails --require html5-boilerplate -u html5-boilerplate --syntax sass -c config/compass.rb --force"
 
 git :add => '.'
-git :commit => "-am 'Initialized Compass.'"
+git :commit => "-aqm 'Initialized Compass.'"

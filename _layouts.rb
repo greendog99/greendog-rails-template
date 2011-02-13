@@ -28,28 +28,7 @@ file 'app/views/layouts/_nav.html.haml', <<-HAML.gsub(/^ {2}/, '')
 HAML
 
 # This needs to be kept up to date as the boilerplate and sporkd gem get updated
-remove_file 'app/views/layouts/application.html.haml'
-file 'app/views/layouts/application.html.haml', <<-HAML.gsub(/^ {2}/, '')
-  !!! 5
-  -# http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither
-  -ie_html :lang => 'en', :class => 'no-js' do
-    = render :partial => 'layouts/head'
-    %body{ :class => "\#{controller.controller_name}" }
-      #container
-        %header#header
-          .row
-            = render :partial => 'layouts/header'
-        %nav#nav
-          .row
-            = render :partial => 'layouts/nav'
-        #main
-          .row
-            = render :partial => 'layouts/flashes'
-          -# You MUST enclose your yielded content in at least one .row
-          = yield
-        %footer#footer
-          .row
-            = render :partial => 'layouts/footer'
-      -# Javascript at the bottom for fast page loading
-      = render :partial => 'layouts/javascripts'
-HAML
+copy_static_file 'app/views/layouts/application.html.haml'
+
+git :add => '.'
+git :commit => "-aqm 'Added layouts.'"

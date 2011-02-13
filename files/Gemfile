@@ -17,6 +17,7 @@ gem 'haml-rails'
 # HTML/CSS framework and boilerplate
 gem 'compass'
 gem 'html5-boilerplate'
+# gem 'compass-960-plugin'
 
 # Human readable URLs
 gem 'friendly_id', '~> 3.2'
