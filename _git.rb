@@ -5,12 +5,14 @@ puts "Initializing new Git repo ...".magenta
 remove_file '.gitignore'
 file '.gitignore', <<-CODE.gsub(/^ {2}/, '')
   .DS_Store
-  .bundle
   mkmf.log
-  log/*
-  coverage/*
-  tmp/**/*
+  log
+  coverage
+  rdoc
+  .bundle
+  tmp
   db/*.sqlite3
+  config/database.yml
   public/stylesheets/compiled/*
   public/system/*
 CODE

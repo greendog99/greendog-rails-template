@@ -5,9 +5,6 @@ quick set-up of new Rails applications.
 
 ## Overview
 
-This is just a [Rails Template](http://m.onkey.org/2008/12/4/rails-templates) to facilitate the
-quick set-up of my Rails applications.  The main features are:
-
 * Sets up the [compass-html5-boilerplate](https://github.com/sporkd/compass-html5-boilerplate) gem by Peter Gumeson (sporkd). This provides:
  * All templates, stylesheets, and views use [haml](http://haml-lang.com/) and [sass](http://sass-lang.com/).
  * Paul Irish's [HTML5 Boilerplate](http://html5boilerplate.com/) for layout and reset.

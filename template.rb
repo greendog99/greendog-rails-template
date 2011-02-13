@@ -15,11 +15,21 @@ require "haml"
 # Set directory for partials
 @partials = "#{File.dirname(__FILE__)}"
 
+# Set directory for static files
+@static_files = "files"
+
+# Copy a static file from the template into the new application
+def copy_static_file(path)
+  puts "Installing #{path}...".magenta
+  remove_file path
+  file path, File.read(File.join(File.dirname(__FILE__), @static_files, path))
+end
+
 puts "\n========================================================="
 puts " RAILS 3 TEMPLATE".yellow.bold
 puts "=========================================================\n"
 
-apply "#{@partials}/_gemfile.rb"
+copy_static_file 'Gemfile'
 apply "#{@partials}/_rvm.rb"           # Must be after gemfile since it runs bundler
 apply "#{@partials}/_boilerplate.rb"
 apply "#{@partials}/_grid.rb"          # Must be after boilerplate since it modifies SASS files
