@@ -3,12 +3,13 @@
 
 puts "Creating custom app configuration hash ...".magenta
 
-initializer 'app_config.rb' do
-<<-RUBY.gsub(/^ {2}/, '')
-  # Load application-specific configuration from config/app_config.yml.
-  # Access the config params via APP_CONFIG['param']
-  APP_CONFIG = YAML.load_file("\#{Rails.root}/config/app_config.yml")
-RUBY
+inject_into_file 'config/application.rb', :before => "require 'rails/all'" do
+  <<-RUBY.gsub(/^ {4}/, '')
+    # Load application-specific configuration from config/app_config.yml.
+    # Access the config params via APP_CONFIG['param']
+    APP_CONFIG = YAML.load(File.read(File.expand_path('../app_config.yml', __FILE__)))
+
+  RUBY
 end
 
 file 'config/app_config.yml', <<-RUBY.gsub(/^ {2}/, '')
@@ -24,3 +25,6 @@ file 'config/app_config.yml', <<-RUBY.gsub(/^ {2}/, '')
   #   - [key, val]
   #   - [key2, val2]
 RUBY
+
+git :add => '.'
+git :commit => "-aqm 'Added app_config components.'"
