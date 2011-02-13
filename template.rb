@@ -29,6 +29,7 @@ puts "\n========================================================="
 puts " RAILS 3 TEMPLATE".yellow.bold
 puts "=========================================================\n"
 
+apply "#{@partials}/_cleanup.rb"
 copy_static_file 'Gemfile'
 copy_static_file 'app/helpers/application_helper.rb'
 copy_static_file 'app/views/shared/_error_messages.html.haml'

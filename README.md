@@ -38,8 +38,8 @@ Create a new Rails application as normal, specifying the path to the template sc
 
 `rails new appname -d mysql -m /tmp/greendog-rails-template/template.rb`
 
-Start the rails server with `rails s` and browse
-to `http://localhost:3000/demos/text` and `http://localhost:3000/demos/grid`.
+Create your database, run your migration, and start the rails server with `rails s`.Browse
+to `http://localhost:3000/demos/text` and `http://localhost:3000/demos/grid` to see sample pages.
 
 ## Documentation
 
