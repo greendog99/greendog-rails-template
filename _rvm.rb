@@ -2,7 +2,10 @@
 
 puts "Setting up RVM gemset and installing bundled gems (may take a while) ... ".magenta
 
-current_ruby = `rvm list`.match(/=> ([^ ]+)/)[1]
+# Need to strip colors in case rvm_pretty_print_flag is enabled in user's .rvmrc
+rvm_list = `rvm list`.gsub(Regexp.new("\e\\[.?.?.?m"), '')
+
+current_ruby = rvm_list.match(/=> ([^ ]+)/)[1]
 desired_ruby = ask("Which RVM Ruby would you like to use? [#{current_ruby}]".red)
 desired_ruby = current_ruby if desired_ruby.blank?
 
@@ -10,7 +13,7 @@ gemset_name = ask("What name should the custom gemset have? [#{@app_name}]".red)
 gemset_name = @app_name if gemset_name.blank?
 
 # Create the gemset
-run "rvm gemset create #{gemset_name}"
+run "rvm gemset create #{desired_ruby}@#{gemset_name}"
 
 # Let us run shell commands inside our new gemset. Use this in other template partials.
 @rvm = "rvm #{desired_ruby}@#{gemset_name}"
