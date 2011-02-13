@@ -35,14 +35,18 @@ apply "#{@partials}/_boilerplate.rb"
 apply "#{@partials}/_grid.rb"          # Must be after boilerplate since it modifies SASS files
 apply "#{@partials}/_stylesheets.rb"   # Must be after boilerplate since it modifies SASS files
 apply "#{@partials}/_layouts.rb"       # Must be after boilerplate since it modifies HAML files
-apply "#{@partials}/_helpers.rb"
+copy_static_file 'app/helpers/application_helper.rb'
+copy_static_file 'app/views/shared/_error_messages.html.haml'
 apply "#{@partials}/_appconfig.rb"
 apply "#{@partials}/_rspec.rb"
 apply "#{@partials}/_capistrano.rb"
 apply "#{@partials}/_application.rb"
 apply "#{@partials}/_friendly_id.rb"   # Must be after application.rb since it runs migrations
+# apply "#{@partials}/_devise.rb"
+# apply "#{@partials}/_forgery.rb"
 apply "#{@partials}/_git.rb"           # Must be last in order to commit initial repository
 apply "#{@partials}/_demo.rb"
+
 
 puts "\n========================================================="
 puts " INSTALLATION COMPLETE!".yellow.bold
