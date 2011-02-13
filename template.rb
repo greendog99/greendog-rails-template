@@ -37,7 +37,7 @@ apply "#{@partials}/_stylesheets.rb"   # Must be after boilerplate since it modi
 apply "#{@partials}/_layouts.rb"       # Must be after boilerplate since it modifies HAML files
 copy_static_file 'app/helpers/application_helper.rb'
 copy_static_file 'app/views/shared/_error_messages.html.haml'
-copy_static_file 'config/initializers/sass_config.rb'
+# copy_static_file 'config/initializers/sass_config.rb'
 apply "#{@partials}/_appconfig.rb"
 apply "#{@partials}/_rspec.rb"
 apply "#{@partials}/_capistrano.rb"

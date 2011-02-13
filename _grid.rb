@@ -13,28 +13,28 @@ end
 file 'app/stylesheets/partials/_grid.sass', <<-SASS.gsub(/^ {2}/, '')
   /* From http://www.1kbgrid.com/
 
-  $columns: 12
+  $columns:   12
   $col_width: 60px
-  $gutter: 20px
-  $margin = $gutter / 2
-  $width = $columns * ($col_width + $gutter)
+  $gutter:    20px
+  $margin   = $gutter / 2
+  $width    = $columns * ($col_width + $gutter)
 
   =row
-    width: $width
-    margin: 0 auto
+    width:    $width
+    margin:   0 auto
     overflow: hidden
 
   =inner_row
-    margin: 0 ($margin * -1)
-    width: auto
+    margin:  0 ($margin * -1)
+    width:   auto
     display: inline-block
 
   =col($n: 1)
-    margin: 0 $margin
+    margin:   0 $margin
     overflow: hidden
-    float: left
-    display: inline
-    width: ($n - 1) * ($col_width + $gutter) + $col_width
+    float:    left
+    display:  inline
+    width:    ($n - 1) * ($col_width + $gutter) + $col_width
 
   =prepend($n: 1)
     margin-left: $n * ($col_width + $gutter) + $margin
