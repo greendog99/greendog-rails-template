@@ -1,0 +1,65 @@
+//
+// FORMS
+//
+
+#main
+  form
+    margin-top: 1em
+    fieldset
+      margin-bottom: 1em
+      padding: 1em
+      border: 1px solid silver
+      +border-radius(10px)
+      +linear-gradient(color-stops(#fff, #f2efe9))
+    
+    legend
+      padding: 0 6px
+      font-weight: bold
+
+    .form_input
+      margin-bottom: 1em
+      clear: both
+
+    label
+      display: block
+      +font-size(12px)
+      &.multiline
+        width: 35em
+      
+    span.description
+      +font-size(11px)
+      &.required
+        color: #844
+
+    .cancel
+      margin-left: 2em
+
+    .checkbox_group
+      input
+        height: 1em
+        vertical-align: top
+      label
+        display: inline
+        margin-left: 4px
+
+    input
+      border: 1px solid #b5ceff
+      padding: 3px
+      &:focus
+        background-color: #F8F8E8
+        border: 1px solid #D8D800
+        color: black
+
+    textarea
+      width: 99%
+      height: 16em
+      line-height: 1.2em
+      padding: 4px
+      &.tall
+        height: 24em
+      &.short
+        height: 8em
+      &:focus
+        background-color: #F8F8E0
+        border: 1px solid #D8D800
+        color: black

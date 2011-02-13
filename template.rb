@@ -30,13 +30,13 @@ puts " RAILS 3 TEMPLATE".yellow.bold
 puts "=========================================================\n"
 
 copy_static_file 'Gemfile'
+copy_static_file 'app/helpers/application_helper.rb'
+copy_static_file 'app/views/shared/_error_messages.html.haml'
 apply "#{@partials}/_rvm.rb"           # Must be after gemfile since it runs bundler
 apply "#{@partials}/_boilerplate.rb"
 apply "#{@partials}/_grid.rb"          # Must be after boilerplate since it modifies SASS files
 apply "#{@partials}/_stylesheets.rb"   # Must be after boilerplate since it modifies SASS files
 apply "#{@partials}/_layouts.rb"       # Must be after boilerplate since it modifies HAML files
-copy_static_file 'app/helpers/application_helper.rb'
-copy_static_file 'app/views/shared/_error_messages.html.haml'
 apply "#{@partials}/_appconfig.rb"
 apply "#{@partials}/_rspec.rb"
 apply "#{@partials}/_capistrano.rb"

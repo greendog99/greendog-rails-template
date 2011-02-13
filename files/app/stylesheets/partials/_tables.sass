@@ -1,0 +1,38 @@
+// Tables
+
+table.horizontal
+  margin: 20px
+  text-align: left
+  padding: 1em
+  th
+    border-bottom: 2px solid #6678b1
+    font-weight: bold
+    padding: 6px 8px
+  td
+    padding: 6px 8px
+  tbody
+    tr:hover
+      background-color: #e8f0ff
+
+table.vertical
+  margin: 20px
+  text-align: left
+  padding: 1em
+  th
+    font-weight: bold
+    padding: 6px 8px
+  td
+    padding: 2px 1em
+    border-bottom: 1px solid #f1eee8
+    vertical-align: middle
+  td:first-child
+    text-align: right
+    white-space: nowrap
+    background-color: #f0ede7
+    border-bottom: 2px solid white
+    border-top: 2px solid white
+    +border_radius(8px)
+  tr:last-child
+    border: none
+  pre
+    font-family: sans-serif
