@@ -19,4 +19,4 @@ CODE
 
 git :init
 git :add => "."
-git :commit => "-am 'Initial commit.'"
+git :commit => "-aqm 'Initial commit.'"

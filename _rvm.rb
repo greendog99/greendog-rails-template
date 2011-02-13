@@ -13,7 +13,7 @@ gemset_name = ask("What name should the custom gemset have? [#{@app_name}]".red)
 gemset_name = @app_name if gemset_name.blank?
 
 # Create the gemset
-run "rvm gemset create #{desired_ruby}@#{gemset_name}"
+run "rvm #{desired_ruby} gemset create #{gemset_name}"
 
 # Let us run shell commands inside our new gemset. Use this in other template partials.
 @rvm = "rvm #{desired_ruby}@#{gemset_name}"

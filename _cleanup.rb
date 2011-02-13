@@ -21,3 +21,5 @@ inside "public/javascripts" do
 	remove_file "prototype.js"
 	remove_file "rails.js"
 end
+
+git :commit => "-aqm 'Removed unnecessary files left over from initial app generation.'"
