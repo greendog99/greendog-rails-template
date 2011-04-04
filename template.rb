@@ -13,7 +13,7 @@ require "bundler"
 require "haml"
 
 # Directories for template partials and static files
-@partials     = File.dirname(__FILE__)
+@partials     = File.join(File.dirname(__FILE__), 'partials')
 @static_files = File.join(File.dirname(__FILE__), 'files')
 
 # Copy a static file from the template into the new application
