@@ -20,3 +20,5 @@ CODE
 git :init
 git :add => "."
 git :commit => "-aqm 'Initial commit.'"
+
+puts "\n"

@@ -12,3 +12,5 @@ copy_static_file "app/stylesheets/style.sass"
 
 git :add => '.'
 git :commit => "-aqm 'Added stylesheets.'"
+
+puts "\n"

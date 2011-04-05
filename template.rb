@@ -1,5 +1,12 @@
+#
+# greendog-rails-template
+#
+# Usage:
+#   rails new appname -d mysql -m /path/to/template.rb
+#
+
 # Check prerequisites
-%w{rails colored bundler compass html5-boilerplate haml}.each do |component|
+%w{colored bundler compass html5-boilerplate haml capistrano}.each do |component|
   unless Gem.available?(component)
     run "gem install #{component}"
     Gem.refresh
@@ -18,13 +25,14 @@ require "haml"
 
 # Copy a static file from the template into the new application
 def copy_static_file(path)
-  puts "Installing #{path}...".magenta
+  puts "\nInstalling #{path}...".magenta
   remove_file path
   file path, File.read(File.join(@static_files, path))
+  puts "\n"
 end
 
 puts "\n========================================================="
-puts " RAILS 3 TEMPLATE".yellow.bold
+puts " GREENDOG RAILS 3 TEMPLATE".yellow.bold
 puts "=========================================================\n"
 
 apply "#{@partials}/_git.rb"

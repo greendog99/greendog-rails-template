@@ -16,7 +16,7 @@ gemset_name = @app_name if gemset_name.blank?
 run "rvm #{desired_ruby} gemset create #{gemset_name}"
 
 # Let us run shell commands inside our new gemset. Use this in other template partials.
-@rvm = "rvm #{desired_ruby}@#{gemset_name}"
+@rvm = "rvm use #{desired_ruby}@#{gemset_name}"
 
 # Create .rvmrc
 file '.rvmrc', @rvm
@@ -30,3 +30,5 @@ run "#{@rvm} gem install bundler"
 
 # Install all other gems needed from Gemfile
 run "#{@rvm} exec bundle install"
+
+puts "\n"

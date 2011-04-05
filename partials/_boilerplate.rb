@@ -8,3 +8,5 @@ run "compass init rails --require html5-boilerplate -u html5-boilerplate --synta
 
 git :add => '.'
 git :commit => "-aqm 'Initialized Compass.'"
+
+puts "\n"

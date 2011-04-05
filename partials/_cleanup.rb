@@ -1,4 +1,4 @@
-puts "\nRemoving unnecessary files ... ".magenta
+puts "Removing unnecessary files ... ".magenta
 remove_file "README"
 
 # remove application layout
@@ -23,3 +23,5 @@ inside "public/javascripts" do
 end
 
 git :commit => "-aqm 'Removed unnecessary files left over from initial app generation.'"
+
+puts "\n"

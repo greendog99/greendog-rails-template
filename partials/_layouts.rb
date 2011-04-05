@@ -17,6 +17,7 @@ file 'app/views/layouts/_header.html.haml', <<-HAML.gsub(/^ {2}/, '')
     %h1 Logo goes here
 HAML
 
+remove_file 'app/views/layouts/_nav.html.haml'
 file 'app/views/layouts/_nav.html.haml', <<-HAML.gsub(/^ {2}/, '')
   .menu
     %p
@@ -32,3 +33,5 @@ copy_static_file 'app/views/layouts/application.html.haml'
 
 git :add => '.'
 git :commit => "-aqm 'Added layouts.'"
+
+puts "\n"
