@@ -1,61 +1,36 @@
 # Gems host
 source 'http://rubygems.org'
 
-# Rails (version >= 3.0.4 and < 3.1)
-gem 'rails', '~> 3.0.4'
+gem 'rails', '~> 3.0.5' # At least 3.0.5 but below 3.1
+gem 'mysql2'            # Database engine
+gem 'hirb'              # Better console formatting. Needs .hirbrc
 
-# Database
-gem 'mysql2'
+gem 'capistrano'        # Deployment manager
 
-# Deployment manager
-gem 'capistrano'
-
-# HTML and CSS replacement (includes SASS)
-gem 'haml', '~> 3.0'
-gem 'haml-rails'
+gem 'haml', '~> 3.0'    # Haml (html/erb replacement) and Sass (css replacement)
+gem 'haml-rails'        # Haml generators for Rails 3
 
 # HTML/CSS framework and boilerplate
 gem 'compass'
 gem 'html5-boilerplate'
 # gem 'compass-960-plugin'
 
-# Human readable URLs
-gem 'friendly_id', '~> 3.2'
-
-# Validation of associations
-gem 'validates_existence', '~> 0.5'
-
-# Better console formatting
-gem 'hirb'
+gem 'friendly_id', '~> 3.2'         # Human readable URLs
+gem 'validates_existence', '~> 0.5' # Validation of associations
 
 # Optional gems below:
 
-# User authentication (accounts)
-# gem 'devise', '~> 1.1'
+# gem 'devise', '~> 1.1'        # User authentication (accounts)
+# gem 'hpricot'                 # For Devise view generation
+# gem 'ruby_parser'             # For Devise view generation
+# gem 'cancan', '~> 1.5.1'      # User authorization (permissions)
 
-# For Devise view generation
-# gem 'hpricot'
-# gem 'ruby_parser'
+# gem 'kramdown', '~> 0.13'     # To convert Markdown to HTML
+# gem 'will_paginate', '~> 3.0.pre2'  # Pagination of long lists
+# gem 'paperclip', '~> 2.3.8'   # File upload management
 
-# User authorization (permissions)
-# gem 'cancan', '~> 1.5.1'
-
-# To convert Markdown to HTML
-# gem 'kramdown', '~> 0.13'
-
-# Pagination of long lists
-# gem 'will_paginate', '~> 3.0.pre2'
-
-# File upload management
-# gem 'paperclip', '~> 2.3.8'
-
-# To deal with file uploads via Flash uploader
-# gem 'mime-types'
-
-# To track changes to pages and other objects
-# gem 'vestal_versions'
-#    -or-
-# gem 'paper_trail'
+# gem 'vestal_versions'         # To track changes to pages and other objects
+# gem 'paper_trail'             # To track changes to pages and other objects
 
 group :development, :test do
   gem 'factory_girl_rails', '~> 1.0'

@@ -5,10 +5,10 @@ quick set-up of new Rails applications.
 
 ## Overview
 
-* Sets up the [compass-html5-boilerplate](https://github.com/sporkd/compass-html5-boilerplate) gem by Peter Gumeson (sporkd). This provides:
- * All templates, stylesheets, and views use [haml](http://haml-lang.com/) and [sass](http://sass-lang.com/).
- * Paul Irish's [HTML5 Boilerplate](http://html5boilerplate.com/) for layout and reset.
- * [Compass](http://compass-style.org/) for managing CSS mixins and frameworks.
+* Incorporates Paul Irish's [HTML5 Boilerplate](http://html5boilerplate.com/) v1.0 for template, reset, css, etc.
+* Removes everything to do with Prototype, and instead includes [JQuery](http://jquery.com/).
+* Templates, stylesheets, and views use [haml](http://haml-lang.com/) and [sass](http://sass-lang.com/) by default.
+* [Compass](http://compass-style.org/) for managing CSS mixins and frameworks.
 * Adds a simple 12-column grid framework from <http://www.1kbgrid.com/> (converted to sass).
 * Adds a basic stylesheet with header, nav bar, body, and footer, and styles for flash messages and buttons.
 * Adds a partial to render form error messages.
