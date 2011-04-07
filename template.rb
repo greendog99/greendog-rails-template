@@ -55,7 +55,7 @@ apply "#{@partials}/_cleanup.rb"
 apply "#{@partials}/_rvm.rb"          # Must be after gemfile since it runs bundler
 apply "#{@partials}/_boilerplate.rb"
 apply "#{@partials}/_compass.rb"
-# apply "#{@partials}/_stylesheets.rb"
+apply "#{@partials}/_stylesheets.rb"
 apply "#{@partials}/_helpers.rb"
 apply "#{@partials}/_appconfig.rb"
 apply "#{@partials}/_rspec.rb"
@@ -65,6 +65,8 @@ apply "#{@partials}/_friendly_id.rb"   # Must be after application.rb since it r
 # apply "#{@partials}/_devise.rb"
 # apply "#{@partials}/_forgery.rb"
 # apply "#{@partials}/_demo.rb"
+
+run "#{@rvm} exec rails generate scaffold post title:string body:text"
 
 puts "\n========================================================="
 puts " INSTALLATION COMPLETE!".yellow.bold

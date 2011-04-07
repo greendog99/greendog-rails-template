@@ -37,3 +37,38 @@ Helper classes:
 
 ## CSS (from Compass)
 
+For full details of Compass CSS features, see <http://compass-style.org/docs/reference/compass/>
+
+Compass mixins can be used in SASS by prefixing with a plus-sign or with @include:
+
+    div
+      +border-radius(25px)
+      @include border-radius(25px)
+
+Some useful features to check out:
+* @include border-radius(pixels)
+* @include box-shadow(color, h-offset, v-offset, blur, spread, inset)
+* @include linear-gradient(color-stops, start, image)
+* @include opacity(value)
+* @include float(left or right)
+* @inlcude min-height(value)
+* @include min-width(value)
+* @include sprite-img(img, col, row, width, height, margin)
+
+Text:
+* @include font-face(name, files, eot)
+* @include text-shadow(color, h-offset, v-offset, blur)
+* @include nowrap
+* @include replace-text(img, x, y)
+* @include hide-text
+
+Links:
+* @include link-colors(normal, hover, active, visited, focus)
+* @include unstyled-link
+
+Lists:
+* @include no-bullet
+* @include no-bullets
+* @include horizontal-list
+* @include inline-list
+
