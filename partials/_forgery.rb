@@ -6,3 +6,5 @@ run "#{@rvm} exec rails generate forgery"
 
 git :add => '.'
 git :commit => "-aqm 'Generated forgery override dirs.'"
+
+puts "\n"

@@ -11,7 +11,7 @@ gem 'haml', '~> 3.0'    # Haml (html/erb replacement) and Sass (css replacement)
 gem 'haml-rails'        # Haml generators for Rails 3
 
 # HTML/CSS framework and boilerplate
-gem 'compass'
+gem 'compass', '>= 0.10.6'
 gem 'html5-boilerplate'
 # gem 'compass-960-plugin'
 

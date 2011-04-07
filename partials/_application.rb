@@ -26,3 +26,8 @@ inject_into_file 'config/application.rb', :before => "  end\nend" do
     config.logger = Logger.new(config.paths.log.first, 10, 20 * 1000 * 1000)
   RUBY
 end
+
+git :add => '.'
+git :commit => "-aqm 'autoload app/extras, set default TZ, log file rotation, and filter for password_confirmation'"
+
+puts "\n"

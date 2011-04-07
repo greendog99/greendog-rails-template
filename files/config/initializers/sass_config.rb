@@ -1,4 +1,4 @@
-Sass::Plugin.options[:property_syntax]   = :new
+Sass::Plugin.options[:property_syntax] = :new
 
 if Rails.env == "development"
   Sass::Plugin.options[:line_numbers] = true

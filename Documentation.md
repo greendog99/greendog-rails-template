@@ -1,6 +1,6 @@
 # Documentation
 
-## HTML
+## HTML (from HTML5 Boilerplate)
 
 Styles can be targeted to specific IE versions by targeting a parent ".ie6", ".ie7", or ".ie6" class:
 
@@ -20,7 +20,7 @@ targeting of <section>, <nav>, and other new HTML5 elements.
 
 [BelatedPNG](http://www.dillerdesign.com/experiment/DD_belatedPNG/) adds PNG support for IE6.
 
-## CSS
+## CSS (from HTML5 Boilerplate)
 
 For full details of CSS features, see <http://html5boilerplate.com/docs/#the-style>
 
@@ -34,3 +34,6 @@ Helper classes:
 
 * `.hidden` will set an element to display:none and visibility:hidden.
 * `.clearfix` can be applied to the immediate parent container of floated elements to ensure the container expands to encompass the floats.
+
+## CSS (from Compass)
+

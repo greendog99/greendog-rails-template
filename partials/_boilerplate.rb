@@ -1,12 +1,24 @@
-# Install Paul Irish's HTML5 Boilerplate HTML/CSS via the sporkd gem
+# Set up default haml layout
 
-puts "Setting up HTML5 Boilerplate with HAML, SASS, and Compass ...".magenta
+puts "Installing customized HTML5-boilerplate files ...".magenta
 
-copy_static_file 'config/compass.rb'
+%w{application.html.erb _header.html.haml _nav.html.haml _flash.html.haml _footer.html.haml}.each do |component|
+  copy_static_file "app/views/layouts/#{component}"
+end
 
-run "compass init rails --require html5-boilerplate -u html5-boilerplate --syntax sass -c config/compass.rb --force"
+%w{apple-touch-icon.png crossdomain.xml favicon.ico robots.txt}.each do |component|
+  copy_static_file "public/#{component}"
+end
+
+%w{dd_belatedpng.js jquery-1.5.1.js jquery-1.5.1.min.js modernizr-1.7.min.js}.each do |component|
+  copy_static_file "public/javascripts/#{component}"
+end
+
+%w{html5-boilerplate.css html5-boilerplate-handheld.css}.each do |component|
+  copy_static_file "public/stylesheets/#{component}"
+end
 
 git :add => '.'
-git :commit => "-aqm 'Initialized Compass.'"
+git :commit => "-aqm 'Added HTML5-boilerplate files.'"
 
 puts "\n"

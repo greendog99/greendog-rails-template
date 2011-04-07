@@ -15,11 +15,11 @@ end
 
 # remove prototype files
 inside "public/javascripts" do
-	remove_file "controls.js"
-	remove_file "dragdrop.js"
-	remove_file "effects.js"
-	remove_file "prototype.js"
-	remove_file "rails.js"
+  remove_file "controls.js"
+  remove_file "dragdrop.js"
+  remove_file "effects.js"
+  remove_file "prototype.js"
+  remove_file "rails.js"
 end
 
 git :commit => "-aqm 'Removed unnecessary files left over from initial app generation.'"

@@ -8,3 +8,5 @@ run "#{@rvm} exec rails generate devise:views"
 
 git :add => '.'
 git :commit => "-aqm 'Generated user auth layer with devise.'"
+
+puts "\n"
