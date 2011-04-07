@@ -2,7 +2,7 @@
 
 puts "Installing customized HTML5-boilerplate files ...".magenta
 
-%w{application.html.erb _header.html.haml _nav.html.haml _flash.html.haml _footer.html.haml}.each do |component|
+%w{application.html.erb _header.html.haml _nav.html.haml _footer.html.haml}.each do |component|
   copy_static_file "app/views/layouts/#{component}"
 end
 

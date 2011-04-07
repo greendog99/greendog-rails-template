@@ -2,6 +2,8 @@
 
 puts "Creating demo pages ...".magenta
 
+# route "demos/grid => 'demos#grid'"
+
 inject_into_file 'config/routes.rb', :after => ".routes.draw do\n" do
   <<-RUBY.gsub(/^ {2}/, '')
 

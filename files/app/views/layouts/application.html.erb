@@ -51,7 +51,7 @@
       <%= render :partial => 'layouts/nav' %>
     </nav>
     <div id="main" role="main">
-      <%= render :partial => 'layouts/flash' %>
+      <%= flash_messages %>
       <%= yield %>
     </div>
     <footer>

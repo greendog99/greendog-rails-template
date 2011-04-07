@@ -10,4 +10,15 @@ module ApplicationHelper
     content_for(:description) { text }
   end
 
+  # Displays all flash[] messages in appropriately named divs for easy styling
+  def flash_messages
+    messages = []
+    flash.each do |type, message|
+      messages << content_tag(:div, :class => "flash_message #{type.to_s}") do
+        content_tag :p, message
+      end
+    end
+    messages.to_s.html_safe
+  end
+
 end
