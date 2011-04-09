@@ -38,7 +38,7 @@
   <%= yield :stylesheets %>
   
   <%-# All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detection %>
-  <script src="javascripts/modernizr-1.7.min.js"></script>
+  <%= javascript_include_tag 'modernizr-1.7.min.js' %>
 </head>
 
 <body>

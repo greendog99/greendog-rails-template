@@ -12,9 +12,7 @@ quick set-up of new Rails applications.
 * Adds a simple 12-column grid framework from <http://www.1kbgrid.com/> (converted to sass).
 * Adds a basic stylesheet with header, nav bar, body, and footer, and styles for flash messages and buttons.
 * Adds a partial to render form error messages.
-* Removes everything to do with Prototype, since the Boilerplate is based on [JQuery](http://jquery.com/).
-* Removes unneeded files like the default Rails index.html and image.
-* Adds a Gemfile with commonly needed gems, and some some optional gems available to un-comment when needed.
+* Adds a Gemfile with commonly used gems, and some some optional gems available to un-comment when needed.
 * Creates a custom RVM gemset for the application, and installs all Gems via bundler.
 * Uses RSpec and factory_girl instead of test-unit.
 * Implements automatic log rotation for server logs, based on log size.
