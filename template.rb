@@ -4,6 +4,8 @@
 # Usage:
 #   rails new appname -d mysql -m /path/to/template.rb
 #
+# Also see http://textmate.rubyforge.org/thor/Thor/Actions.html
+#
 
 # Check prerequisites
 %w{colored bundler compass html5-boilerplate haml capistrano}.each do |component|
@@ -64,7 +66,7 @@ apply "#{@partials}/_application.rb"
 apply "#{@partials}/_friendly_id.rb"   # Must be after application.rb since it runs migrations
 # apply "#{@partials}/_devise.rb"
 # apply "#{@partials}/_forgery.rb"
-# apply "#{@partials}/_demo.rb"
+apply "#{@partials}/_demo.rb"
 
 run "#{@rvm} exec rails generate scaffold post title:string body:text"
 

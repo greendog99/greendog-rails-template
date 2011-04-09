@@ -1,84 +1,84 @@
-/* From http://www.1kbgrid.com/
+// From http://www.1kbgrid.com/ and http://heygrady.com/1kb-grid-system-and-sass
 
+// Grid configuration
 $columns:   12
 $col_width: 60px
 $gutter:    20px
 $margin   = $gutter / 2
 $width    = $columns * ($col_width + $gutter)
 
-=row
+// Make this block "n" columns wide, with an optional extra value to
+// alter the standard width to account for borders, etc.
+@mixin grid-column($n: 1, $plus: 0)
+  margin:   0 $margin
+  width:    $col_width * $n + $gutter * ($n - 1)
+  overflow: hidden
+  float:    left
+  display:  inline
+
+@mixin grid-row
   width:    $width
   margin:   0 auto
   overflow: hidden
 
-=inner_row
+@mixin grid-row-inner
   margin:  0 ($margin * -1)
   width:   auto
   display: inline-block
 
-=col($n: 1)
-  margin:   0 $margin
-  overflow: hidden
-  float:    left
-  display:  inline
-  width:    ($n - 1) * ($col_width + $gutter) + $col_width
-
-=prepend($n: 1)
+@mixin grid-prepend($n: 1)
   margin-left: $n * ($col_width + $gutter) + $margin
 
-=append($n: 1)
+@mixin grid-append($n: 1)
   margin-right: $n * ($col_width + $gutter) + $margin
 
-// Add the .row class to a div to start a new row. Can be nested
+// Add the .grid-row class to a div to start a new row. Can be nested.
 
-.row
-  +row
+.grid-row
+  @include grid-row
 
-.row .row
-  +inner_row
+.grid-row .grid-row
+  @include grid-row-inner
 
-// Some sample classes to get started with columns. You should create
-// your own semantic classes (e.g. section.welcome, div.blog, div.post...)
-
-.non_semantic_12col
-  +col(12)
-
-.non_semantic_8col
-  +col(8)
-
-.non_semantic_4col
-  +col(4)
-
-.non_semantic_4col_tall
-  +col(4)
-  p
-    line-height: 170px
-
-//
-// Sample HAML to draw a grid
-//
-// .row
-//   .non_semantic_12col
-//     %p 12
+////////////////////////////////////
+// Sample SASS to demonstrate nested grids. Works with the sample HTML
+// immediately below.
 // 
-// .row
-//   .non_semantic_8col
-//     %p 8
-//     .row
-//       .non_semantic_4col
-//         %p 4
-//       .non_semantic_4col
-//         %p 4
-//   .non_semantic_4col_tall
-//     %p 4
+// .header
+//   @include grid-column(12)
+// .main
+//   @include grid-column(10)
+// .story
+//   @include grid-column(5)
+// .sidebar
+//   @include grid-column(2)
+//
+////////////////////////////////////
+// Sample HAML to draw a nested grid
+//
+// #demo-grid    
+//   .grid-row
+//     .header
+//       %p 12
+// 
+//   .grid-row
+//     .main
+//       %p 10
+//       .grid-row
+//         .story
+//           %p 5
+//         .story
+//           %p 5
+//     .sidebar
+//       %p 2
 //
 // ---------------------------------------------------
 // |                        12                       |
 // ---------------------------------------------------
-// ---------------------------------- ----------------
-// |                8               | |              |
-// ---------------------------------- |      4       |
-// ----------------- ---------------- |              |
-// |       4       | |       4      | |              |
-// ----------------- ---------------- ----------------
+// --------------------------------------- -----------
+// |                   10                | |         |
+// --------------------------------------- |    2    |
+// -------------------- ------------------ |         |
+// |         5        | |        5       | |         |
+// -------------------- ------------------ -----------
 //
