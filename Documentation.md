@@ -27,7 +27,7 @@ For full details of CSS features, see <http://html5boilerplate.com/docs/#the-sty
 * Full CSS reset is performed, including many tweaks to spacing and layout of lists, checkboxes, links, etc.
 * Uses [Yahoo's CSS Fonts](http://developer.yahoo.com/yui/3/cssfonts/):
  * Default font is sans-serif 13px with 16px line-height
- * To change a font size, use 77%, 85%, 93%, 100%, 108%, 123.1%, 138.5%, 153.9%, or 182%
+ * To change a font size, use 77%, 85%, 93%, 100%, 108%, 116%, 123.1%, 138.5%, 153.9%, or 182%
 * Basic print stylesheet.
 
 Helper classes:
@@ -72,3 +72,6 @@ Lists:
 * @include horizontal-list
 * @include inline-list
 
+## Grid system (from 1kbgrid.com)
+
+## Color palette (from Solarized)

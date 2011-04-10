@@ -2,22 +2,16 @@
 
 puts "Creating demo pages ...".magenta
 
+route '# Demonstrations. Remove demo routes, controller, view, and stylesheet for production'
 route "match 'demos/grid' => 'demos#grid'"
 route "match 'demos/text' => 'demos#text'"
-
-# inject_into_file 'config/routes.rb', :after => ".routes.draw do\n" do
-#   <<-RUBY.gsub(/^ {2}/, '')
-# 
-#     match 'demos/grid' => 'demos#grid'
-#     match 'demos/text' => 'demos#text'
-# 
-#   RUBY
-# end
  
 copy_static_file "app/controllers/demos_controller.rb"
 copy_static_file "app/views/demos/grid.html.haml"
 copy_static_file "app/stylesheets/partials/_demo.sass"
-append_file "app/stylesheets/screen.sass", "@import partials/demo"
+
+append_file "app/stylesheets/screen.sass", "// Demonstrations. Remove for production\n"
+append_file "app/stylesheets/screen.sass", "@import partials/demo\n"
 
 # file 'app/views/demos/text.html.haml', <<-HAML.gsub(/^ {2}/, '')
 #   .row

@@ -10,6 +10,7 @@ quick set-up of new Rails applications.
 * Templates, stylesheets, and views use [haml](http://haml-lang.com/) and [sass](http://sass-lang.com/) by default.
 * [Compass](http://compass-style.org/) for managing CSS mixins and frameworks.
 * Adds a simple 12-column grid framework from <http://www.1kbgrid.com/> (converted to sass).
+* Uses Ethan Schoonover's [Solarized](http://ethanschoonover.com/solarized) for the default color palette.
 * Adds a basic stylesheet with header, nav bar, body, and footer, and styles for flash messages and buttons.
 * Adds a partial to render form error messages.
 * Adds a Gemfile with commonly used gems, and some some optional gems available to un-comment when needed.

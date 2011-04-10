@@ -7,11 +7,13 @@ $gutter:    20px
 $margin   = $gutter / 2
 $width    = $columns * ($col_width + $gutter)
 
-// Make this block "n" columns wide, with an optional extra value to
-// alter the standard width to account for borders, etc.
-@mixin grid-column($n: 1, $plus: 0)
+// Make the block n columns wide, with an optional extra value to
+// alter the standard width to account for padding, borders, etc.
+// For example, if your column block has a 5px left and right padding,
+// call "grid-column(n, 10px)"
+@mixin grid-column($n: 1, $offset: 0)
   margin:   0 $margin
-  width:    $col_width * $n + $gutter * ($n - 1)
+  width:    $col_width * $n + $gutter * ($n - 1) - $offset
   overflow: hidden
   float:    left
   display:  inline
@@ -26,19 +28,28 @@ $width    = $columns * ($col_width + $gutter)
   width:   auto
   display: inline-block
 
+// Adds n empty columns to the left of the block.
 @mixin grid-prepend($n: 1)
   margin-left: $n * ($col_width + $gutter) + $margin
 
+// Adds n empty columns to the right of the block.
 @mixin grid-append($n: 1)
   margin-right: $n * ($col_width + $gutter) + $margin
 
+// Recommended implementation:
+//
 // Add the .grid-row class to a div to start a new row. Can be nested.
+// Alternatively, start a row by adding "@include grid-row" to a block,
+// and add "@include grid-row-inner" to a nested row.
+//
+// Add "@include grid-column(n)" to block elements to control their positioning.
 
 .grid-row
   @include grid-row
 
 .grid-row .grid-row
   @include grid-row-inner
+
 
 ////////////////////////////////////
 // Sample SASS to demonstrate nested grids. Works with the sample HTML
