@@ -22,6 +22,10 @@ quick set-up of new Rails applications.
 * Sets up a Git repository complete with gitignore list, and commits the entire project.
 * Adds a demonstration page to help get started (/demos)
 
+## Changes
+
+* 2011-04-10: Switched to manually-integrated blueprint and compass, instead of via existing gems.  Changed default style to be simpler, and to use Solarized for the color palette.
+
 ## Prerequisites
 
 * [Rails](http://rubyonrails.org/) 3.0 or newer
