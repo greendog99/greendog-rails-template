@@ -3,7 +3,7 @@
 puts "Creating default stylesheets ...".magenta
 
 # %w{grid page buttons flashes forms tables}.each do |component|
-%w{grid solarize page_header page_nav page_footer flashes}.each do |component|
+%w{grid solarize main page_header page_nav page_footer flashes}.each do |component|
   copy_static_file "app/stylesheets/partials/_#{component}.sass"
   append_file      "app/stylesheets/screen.sass", "@import partials/#{component}\n"
 end
