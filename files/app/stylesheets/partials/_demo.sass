@@ -1,18 +1,26 @@
 #demo-grid
   p
-    font-size: 60px
+    font-size: 48px
     text-align: center
-    padding: 10px 0 10px 0
+    padding: 8px 0 2px 0
     border: 1px solid black
-    margin-bottom: 20px
+    margin-bottom: 16px
 
-.header
-  @include grid-column(12)
-.main
-  @include grid-column(10)
-.story
-  @include grid-column(5)
-.sidebar
-  @include grid-column(2)
-  p
-    line-height: 190px
+  .header
+    @include grid-column(12)
+  .main
+    @include grid-column(10)
+  .story
+    @include grid-column(5)
+  .sidebar
+    @include grid-column(2)
+    p
+      line-height: 146px
+
+#demo-main
+  .content
+    @include grid-column(12)
+  .main
+    @include grid-column(8)
+  .aside
+    @include grid-column(4)

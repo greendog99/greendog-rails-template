@@ -68,8 +68,6 @@ apply "#{@partials}/_friendly_id.rb"   # Must be after application.rb since it r
 # apply "#{@partials}/_forgery.rb"
 apply "#{@partials}/_demo.rb"
 
-run "#{@rvm} exec rails generate scaffold post title:string body:text"
-
 puts "\n========================================================="
 puts " INSTALLATION COMPLETE!".yellow.bold
 puts "=========================================================\n\n\n"

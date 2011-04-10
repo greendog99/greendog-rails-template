@@ -43,21 +43,21 @@
 
 <body>
 
-  <div id="container">
-    <header>
+  <div id='container'>
+    <header id='page-header'>
       <%= render :partial => 'layouts/header' %>
     </header>
-    <nav>
+    <nav id='page-nav'>
       <%= render :partial => 'layouts/nav' %>
     </nav>
-    <div id="main" role="main">
+    <div id='main' role='main'>
       <%= flash_messages %>
       <%= yield %>
     </div>
-    <footer>
-      <%= render :partial => 'layouts/footer' %>
-    </footer>
-  </div>
+  </div> <!-- #container -->
+  <footer id='page-footer'>
+    <%= render :partial => 'layouts/footer' %>
+  </footer>
 
   <!-- JavaScript at the bottom for fast page loading -->
 

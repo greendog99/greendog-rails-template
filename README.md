@@ -20,7 +20,7 @@ quick set-up of new Rails applications.
 * Adds a config/app_config.yml file and corresponding initializer, to facilitate app-specific config settings.
 * Disables timestamped_migrations to make the filenames more usable in TextMate.
 * Sets up a Git repository complete with gitignore list, and commits the entire project.
-* Adds a demos controller and several demo pages to help get started.
+* Adds a demonstration page to help get started (/demos)
 
 ## Prerequisites
 
@@ -42,7 +42,7 @@ to `http://localhost:3000/demos/text` and `http://localhost:3000/demos/grid` to 
 
 ## Documentation
 
-This section will explain how to use each of the features.
+See the [documentation](documentation.html) page for a summary of how to use each of the features.
 
 ## To Do
 
