@@ -2,6 +2,7 @@
 source 'http://rubygems.org'
 
 gem 'rails', '~> 3.0.5' # At least 3.0.5 but below 3.1
+gem 'rake', '~> 0.8.7'  # Rake 0.9 is incompatible with current version of Rails
 gem 'mysql2'            # Database engine
 gem 'hirb'              # Better console formatting. Needs .hirbrc
 
