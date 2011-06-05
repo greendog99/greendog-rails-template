@@ -1,14 +1,15 @@
 # Gems host
 source 'http://rubygems.org'
 
-gem 'rails', '~> 3.0.5' # At least 3.0.5 but below 3.1
+gem 'rails', '~> 3.0.7' # At least 3.0.7 but below 3.1
 gem 'rake', '~> 0.8.7'  # Rake 0.9 is incompatible with current version of Rails
-gem 'mysql2'            # Database engine
+gem 'mysql2', '< 0.3'   # Database engine.  3.0 is not compatible with Rails 3.0.x
 gem 'hirb'              # Better console formatting. Needs .hirbrc
 
 gem 'capistrano'        # Deployment manager
 
-gem 'haml', '~> 3.0'    # Haml (html/erb replacement) and Sass (css replacement)
+gem 'haml', '~> 3.1'    # Haml (html/erb replacement)
+gem 'sass', '~> 3.1'    # Sass (css replacement)
 gem 'haml-rails'        # Haml generators for Rails 3
 
 # HTML/CSS framework and boilerplate
