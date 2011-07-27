@@ -1,8 +1,8 @@
 # Gems host
 source 'http://rubygems.org'
 
-gem 'rails', '~> 3.0.7' # At least 3.0.7 but below 3.1
-gem 'rake', '~> 0.8.7'  # Rake 0.9 is incompatible with current version of Rails
+gem 'rails', '~> 3.0.8' # At least 3.0.8 but below 3.1
+gem 'rake', '0.9.0'
 gem 'mysql2', '< 0.3'   # Database engine.  3.0 is not compatible with Rails 3.0.x
 gem 'hirb'              # Better console formatting. Needs .hirbrc
 
